@@ -13,6 +13,11 @@ RUN apt-get -y update && \
 	x11vnc \
 	xvfb \
 	xterm \
+    vim \
+    vi \
+    clang \
+    wget \
+    cscope \
 	xz-utils
 
 # Clean up stale packages
@@ -21,9 +26,9 @@ RUN apt-get clean -y && \
 	rm -rf /var/lib/apt/lists/*
 
 # Add entrypoint script
-ADD ./entrypoint.sh /home/user/entrypoint.sh
-RUN dos2unix /home/user/entrypoint.sh
-ENTRYPOINT ["/home/user/entrypoint.sh"]
+#ADD ./entrypoint.sh /home/user/entrypoint.sh
+#RUN dos2unix /home/user/entrypoint.sh
+#ENTRYPOINT ["/home/user/entrypoint.sh"]
 
 # Add bash completion script
 ADD ./bash_completion /home/user/.bash_completion
