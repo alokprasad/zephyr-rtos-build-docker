@@ -14,7 +14,6 @@ RUN apt-get -y update && \
 	xvfb \
 	xterm \
     vim \
-    vi \
     clang \
     wget \
     cscope \
@@ -44,13 +43,6 @@ ENV ZEPHYR_BASE=/workdir/zephyr
 # Set working directory
 WORKDIR /workdir
 VOLUME ["/workdir"]
-
-# Configure VNC authentication
-ARG VNCPASSWD=zephyr
-RUN mkdir ~/.vnc && x11vnc -storepasswd ${VNCPASSWD} ~/.vnc/passwd
-
-# Expose port 5900 for VNC
-EXPOSE 5900
 
 # Adjust 'user' home directory permissions
 USER root
