@@ -1,3 +1,5 @@
+Below Steps allows u run setup build and run sample application within 5 min.
+
 # Zephyr Docker Images
 git clone https://github.com/alokprasad/zephyr-rtos-build-docker.git
 
