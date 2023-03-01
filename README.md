@@ -29,6 +29,7 @@ west build -t run
 ## Debugging gdb sample
 
 west build -b qemu_x86 zephyr/samples/subsys/debug/gdbstub
+
 west build -t run
 
 In another shell connect to existing docker 
