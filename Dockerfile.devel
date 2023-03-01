@@ -13,10 +13,11 @@ RUN apt-get -y update && \
 	x11vnc \
 	xvfb \
 	xterm \
-    vim \
-    clang \
-    wget \
-    cscope \
+        vim \
+        clang \
+        wget \
+        cscope \
+	gdb \
 	xz-utils
 
 # Clean up stale packages
