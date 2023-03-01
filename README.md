@@ -32,5 +32,7 @@ west build -b qemu_x86 zephyr/samples/subsys/debug/gdbstub
 
 In another shell connect to existing docker 
   docker exec -it  <docker_instance_via_docker_ps>  /bin/bash 
+  
   gdb build/zephyr/zephyr.elf
+  
   (gdb) target remote :5678  
